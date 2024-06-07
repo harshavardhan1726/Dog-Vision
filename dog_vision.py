@@ -36,7 +36,7 @@ Some information about the data:
 """
 
 # Unzip the uploaded data into Google Drive
-#!unzip "/content/drive/MyDrive/Dog Vision/dog-breed-identification.zip" -d "/content/drive/MyDrive/Dog_Vision/"
+#!unzip "/content//Dog Vision/dog-breed-identification.zip" -d "/content//Dog_Vision/"
 
 """### Get our workspace ready
 
@@ -64,7 +64,7 @@ Let's start by accessing our data and checking out the labels.
 
 # Checkout the labels of our data
 import pandas as pd
-labels_csv = pd.read_csv("drive/MyDrive/Dog_Vision/labels.csv")
+labels_csv = pd.read_csv("/Dog-Vision/dog-breed-identification/labels.csv")
 print(labels_csv.describe())
 print(labels_csv.head())
 
@@ -77,7 +77,7 @@ labels_csv.breed.value_counts().median()
 
 # Let's view an image
 from IPython.display import Image
-Image("drive/MyDrive/Dog_Vision/train/001513dfcb2ffafc82cccf4d8bbaba97.jpg")
+Image("/Dog_Vision/train/001513dfcb2ffafc82cccf4d8bbaba97.jpg")
 
 """### Getting images and their labels
 
@@ -87,23 +87,23 @@ Let's get a list of all of our image file pathnames.
 labels_csv.head()
 
 # Create pathnames from image ID's
-filenames = ["drive/MyDrive/Dog_Vision/train/" + fname + ".jpg" for fname in labels_csv.id]
+filenames = ["/Dog_Vision/train/" + fname + ".jpg" for fname in labels_csv.id]
 
 # check the first 10
 filenames[9000]
 
 import os
-len(os.listdir("drive/MyDrive/Dog_Vision/train/"))
+len(os.listdir("/Dog_Vision/train/"))
 
 # Check whether number of filenames matches number of actual image files
 import os
-if(len(os.listdir("drive/MyDrive/Dog_Vision/train/")) == len(filenames)):
+if(len(os.listdir("/Dog_Vision/train/")) == len(filenames)):
   print("Filenames match actual amount of images!!! Proceed.")
 else:
   print("Filenames do not match actual amount of file, check the target directory")
 
 from IPython.display import Image
-Image("drive/MyDrive/Dog_Vision/train/e20e32bf114141e20a1af854ca4d0ecc.jpg")
+Image("/Dog_Vision/train/e20e32bf114141e20a1af854ca4d0ecc.jpg")
 
 Image(filenames[9000])
 

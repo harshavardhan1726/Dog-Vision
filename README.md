@@ -9,7 +9,7 @@ Dog Vision aims to identify the breed of a dog from an image. This project utili
 Given an image of a dog, the objective is to determine its breed out of 120 possible dog breeds.
 
 ## Data
-The dataset is from Kaggle's Dog Breed Identification competition and consists of:
+The dataset is from Kaggle's [Dog Breed Identification competition](https://www.kaggle.com/c/dog-breed-identification/data) and consists of:
 - 10,000+ labeled images for training
 - 10,000+ unlabeled images for testing
 
@@ -21,11 +21,8 @@ The model's predictions will be evaluated based on the probabilities assigned to
 - **Output:** Predicted probabilities for each of the 120 breeds
 
 ## Project Structure
-- **data/**: Directory containing the dataset
-- **notebooks/**: Jupyter notebooks for data exploration and model training
-- **scripts/**: Python scripts for preprocessing and model building
-- **models/**: Saved trained models
-- **results/**: Evaluation results and metrics
+- **/Dog-Vision/dog-breed-identification/**: Directory containing the dataset
+- **/Dog-Vision/dog_vision.py**: This is the script for the Dog Vision Deep Learning Model
 
 ## Requirements
 - TensorFlow 2.x
@@ -42,4 +39,19 @@ The model's predictions will be evaluated based on the probabilities assigned to
    ```
 
 2. Install the required dependencies
+    ```sh
+    pip install -r requirements.txt
 
+    ```
+
+3. Download the dataset from Kaggle and place it in the data/ directory
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+## Acknowledgements
+
+- [Kaggle Dog Breed Identification competition](https://www.kaggle.com/c/dog-breed-identification/data)
+- TensorFlow and TensorFlow Hub documentation and resources
